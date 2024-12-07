@@ -1,30 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kochakorn Wetchadet</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto", Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #620000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-image {
+            display: block;
+            margin: 0 auto 20px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #620000;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #620000;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .hobby-section, .contact-section {
+            margin-top: 20px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background-color: #620000;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+            margin: 20px auto;
+            transition: background-color 0.3s;
+        }
+
+        .contact-button:hover {
+            background-color: #8b0000;
+        }
+
+        .social-icon {
+            display: block;
+            margin: 0 auto 10px;
+            width: 40px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px 0;
+            background-color: #f1f1f1;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
 </head>
+<body>
+    <header>
+        Kochakorn Wetchadet
+    </header>
 
-<body style="background-color:#9a0202;">
-<center><img src ="kochakorn.jpg" alt="Profile Image" style="width: 200px; height: auto;">
-<center><h1>Hello</h1>
-<h2>นางสาวกชกร เวชเดช</h2>
-<h2>ชื่อเล่น ชื่อครีม อายุ19ปี</h2>
-<h2>เคยศึกษาอยู่ที่โรงเรียนจอมสุรางค์อุปถัมภ์</h2>
-<h2>ศึกษาอยู่ที่มหาวิทยาลัยเทคโนโลยีราชมงคลสุวรรณภูมิ ศูนย์หันตรา</h2>
-<h2>คณะวิทยาศาสตร์เเละเทคโนโลยี</h2>
-<h2>สาขาเทคโนโลยีมัลติมีเดีย</h2>
-<h3>งานอดิเรก ชอบฟังเพลง เล่นเกม</h3>
-<h3>ชอบฟังเพลงวงPUN</h3>
-<h3>ชอบฟังThe Ghost Radio</h3>
+    <div class="container">
+        <img src="kochakorn.jpg" alt="Profile Image" class="profile-image">
+        <h1>นางสาวกชกร เวชเดช</h1>
+        <h2>ชื่อเล่น: ครีม | อายุ: 19 ปี</h2>
+        <h2>มหาวิทยาลัยเทคโนโลยีราชมงคลสุวรรณภูมิ</h2>
+        <h3>คณะวิทยาศาสตร์และเทคโนโลยี | สาขาเทคโนโลยีมัลติมีเดีย</h3>
 
-<h2>ช่องทางการติดต่อ</h2>
-<img src ="FB.icon.jpg" alt="Profile Image" style="width: 40px; height: auto;">
+        <div class="hobby-section">
+            <h2>งานอดิเรก</h2>
+            <h3>- ชอบฟังเพลงวง PUN</h3>
+            <h3>- ชอบฟัง The Ghost Radio</h3>
+            <h3>- ชอบเล่นเกม</h3>
+        </div>
 
-<p>
-     <a href="https://www.facebook.com/profile.php?id=100026599628235">
-	<button>Click here to visit Facebook</button>
-     </a>
-    </p>
+        <div class="contact-section">
+            <h2>ช่องทางการติดต่อ</h2>
+            <img src="FB.icon.jpg" alt="Facebook Icon" class="social-icon">
+            <a href="https://www.facebook.com/profile.php?id=100026599628235" target="_blank" class="contact-button">เยี่ยมชม Facebook</a>
+        </div>
+    </div>
 
+    <footer>
+        &copy; 2024 Kochakorn Wetchadet. All Rights Reserved.
+    </footer>
 </body>
 </html>

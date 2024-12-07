@@ -3,280 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kochakorn Wetchadet</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        /* Reset Default Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Base styles */
         body {
             font-family: 'Quicksand', sans-serif;
-            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
             color: #333;
-            line-height: 1.6;
         }
 
-        /* Header Styles */
-        header {
-            background-color: #8B0000;
-            color: #fff;
-            padding: 20px 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-
-        header h1 {
-            font-size: 30px;
+        h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            letter-spacing: 2px;
+            margin: 0;
         }
 
-        header nav {
-            display: flex;
-            gap: 25px;
+        section {
+            padding: 40px;
+            margin-bottom: 40px;
         }
 
-        header nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 16px;
-            transition: color 0.3s ease;
-        }
-
-        header nav a:hover {
-            color: #ffeb3b;
+        .container {
+            width: 80%;
+            margin: 0 auto;
         }
 
         /* Profile Section */
         .profile-section {
-            padding: 120px 10% 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .profile-section img {
-            width: 100%;
+            width: 50%; /* Shrinking the image to 50% */
             height: auto;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 50%;
             margin-bottom: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         .profile-section h1, .profile-section h2 {
-            font-size: 28px;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .profile-section h1 {
+            font-size: 2.5rem;
             color: #333;
-            margin-top: 20px;
         }
 
-        .profile-section p {
-            font-size: 16px;
-            font-weight: 400;
-            color: #555;
+        .profile-section h2 {
+            font-size: 1.25rem;
+            color: #777;
         }
 
-        /* About Section */
-        #about {
-            padding: 80px 10%;
-            text-align: center;
-            background-color: #fff;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
-            margin-top: 40px;
-        }
-
-        #about h2 {
-            font-size: 32px;
-            font-family: 'Playfair Display', serif;
+        /* Section Title */
+        .section-title {
+            font-size: 2rem;
             font-weight: 700;
-            color: #8B0000;
             margin-bottom: 30px;
+            color: #333;
         }
 
-        #about p {
-            font-size: 18px;
-            line-height: 1.8;
-            max-width: 900px;
-            margin: 0 auto;
-            font-weight: 400;
+        /* About Me Section */
+        .about-section {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section p {
+            font-size: 1.125rem;
+            line-height: 1.6;
             color: #555;
-        }
-
-        #about a {
-            color: #8B0000;
-            font-weight: 500;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        #about a:hover {
-            color: #ffeb3b;
         }
 
         /* Pictures Section */
-        #pictures {
-            padding: 60px 10%;
-            text-align: center;
-            background-color: #f9f9f9;
-        }
-
-        #pictures h2 {
-            font-size: 32px;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            color: #8B0000;
-            margin-bottom: 30px;
-        }
-
-        .pictures-gallery {
+        .pictures-section {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-        }
-
-        .pictures-gallery img {
-            width: 100%;
-            border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .pictures-gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Footer Section */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 40px;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        footer a:hover {
-            color: #ffeb3b;
-        }
-
-        /* Button Styles */
-        .button {
-            background-color: #8B0000;
-            color: #fff;
-            padding: 12px 25px;
-            border-radius: 5px;
-            font-size: 16px;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #ffeb3b;
-        }
-
-        /* Contact Form Styles */
-        #contact {
-            padding: 80px 10%;
-            background-color: #fff;
-            text-align: center;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
-            margin-top: 40px;
-        }
-
-        #contact h2 {
-            font-size: 32px;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            color: #8B0000;
             margin-bottom: 30px;
         }
 
-        .contact-form a {
-            display: inline-block;
-            margin: 10px;
-            padding: 12px 25px;
-            background-color: #8B0000;
-            color: #fff;
-            border-radius: 5px;
-            font-size: 16px;
+        .pictures-section img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .pictures-section img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contact-section a {
             text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
+            color: #fff;
+            background-color: #ff5733;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
         }
 
-        .contact-form a:hover {
-            background-color: #ffeb3b;
+        .contact-section a:hover {
+            background-color: #ff2a00;
         }
 
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 40px;
+        }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>KOCHAKORN WETCHADET</h1>
-    <nav>
-        <a href="#profile">Profile</a>
-        <a href="#about">About</a>
-        <a href="#pictures">Pictures</a>
-    </nav>
-</header>
+    <section class="profile-section">
+        <img src="kochakorn.jpg" alt="Profile Picture">
+        <h1>Kochakorn Wetchadet</h1>
+        <h2>นางสาวกชกร เวชเดช</h2>
+        <h2>สาขาเทคโนโลยีมัลติมีเดีย | มหาวิทยาลัยเทคโนโลยีราชมงคลสุวรรณภูมิ</h2>
+    </section>
 
-<section class="profile-section" id="profile">
-    <img src="ครีม1.jpg" alt="Kochakorn Profile Picture">
-</section>
+    <section class="about-section">
+        <h2 class="section-title">ABOUT ME</h2>
+        <p>สวัสดีค่ะ ดิฉันนางสาวกชกร เวชเดช ชื่อเล่นชื่อครีม ฉันมีความสนใจในเทคโนโลยี ฉันเคยเเข่งเกมส์ ฉันชอบเล่นเกมส์ Phasmophobia เเละเกมส์เเนวเนื้อเรื่องเพราะมันทำให้ฉันได้อ่านเนื้อเรื่องในเกมส์ เพื่อให้เข้าใจเนื้อเรื่องในการเล่น ฉันชอบฟังเพลง Lost Jigsaw - guncharlie และเพลง Bruno Mars - When I Was Your Man (เป็นเพิ่มหนึ่งฝั่งลิ้งค์ไปหน้ายูทูปทั้ง2เพลง) ฉันชอบถ่ายรูป ชอบเก็บบรรยากาศ ชอบถ่ายอะไรที่สวยๆเก็บไว้</p>
+    </section>
 
-<section id="about">
-    <h2>ABOUT ME</h2>
-    <p>สวัสดีค่ะ ดิฉันนางสาวกชกร เวชเดช ชื่อเล่นชื่อครีม ฉันมีความสนใจในเทคโนโลยี ฉันเคยเเข่งเกมส์ ฉันชอบเล่นเกมส์ Phasmophobia เเละเกมส์เเนวเนื้อเรื่องเพราะมันทำให้ฉันได้อ่านเนื้อเรื่องในเกมส์ เพื่อให้เข้าใจเนื้อเรื่องในการเล่น ฉันชอบฟังเพลง <a href="https://www.youtube.com/watch?v=tnhBwIPRvXI" target="_blank">Lost Jigsaw - guncharlie</a> และเพลง <a href="https://www.youtube.com/watch?v=ekzHIouo8Q4" target="_blank">Bruno Mars - When I Was Your Man</a> ฉันชอบถ่ายรูป ชอบเก็บบรรยากาศ ชอบถ่ายอะไรที่สวยๆเก็บไว้</p>
-</section>
-
-<section id="pictures">
-    <h2>PICTURES</h2>
-    <div class="pictures-gallery">
+    <section class="pictures-section">
         <img src="วิว1.jpg" alt="Picture 1">
         <img src="วิว2.jpg" alt="Picture 2">
         <img src="วิว3.jpg" alt="Picture 3">
         <img src="วิว4.jpg" alt="Picture 4">
         <img src="วิว5.jpg" alt="Picture 5">
         <img src="วิว6.jpg" alt="Picture 6">
-    </div>
-</section>
+    </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-form">
-        <a href="https://www.facebook.com/profile.php?id=100026599628235" class="button" target="_blank">Facebook</a>
-        <a href="https://line.me/ti/p/0651141784" class="button" target="_blank">Line</a>
-        <a href="mailto:466420241001-st@rmutsb.ac.th" class="button">Email Me</a>
-        <a href="tel:0651141784" class="button">Call Me</a>
-        <a href="https://www.instagram.com/kreamkch_/" class="button" target="_blank">Instagram</a>
-    </div>
-</section>
+    <section class="contact-section">
+        <h2 class="section-title">ช่องทางการติดต่อ</h2>
+        <a href="https://www.facebook.com/profile.php?id=100026599628235" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/kreamkch_/" target="_blank">Instagram</a>
+        <a href="https://line.me/R/ti/p/%40651ll784" target="_blank">Line</a>
+        <a href="tel:0651141784">Call Me</a>
+        <a href="mailto:466420241001-st@rmutsb.ac.th">Email Me</a>
+    </section>
 
-<footer>
-    <p>&copy; Kochakorn Wetchadet. </p>
-</footer>
+    <footer>
+        <p>&copy; 2024 Kochakorn Wetchadet. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>

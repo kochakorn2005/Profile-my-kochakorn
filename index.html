@@ -31,18 +31,23 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             padding: 15px 20px;
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        .navbar h1 {
+        .navbar a {
+            color: white;
             font-family: 'Playfair Display', serif;
-            color: #fff;
-            font-size: 2rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #fddada;
         }
 
         /* Hero Section */
@@ -107,28 +112,45 @@
             color: #555;
         }
 
-        /* Picture Section */
-        .pictures {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 40px;
+        /* Profile Section */
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            padding: 50px 20px;
+            margin: 40px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
 
-        .pictures img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .pictures img:hover {
-            transform: scale(1.05);
+        .profile img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
         }
 
-        /* Link Buttons */
+        .profile img:hover {
+            transform: scale(1.05);
+        }
+
+        .profile h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .profile h2 {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #555;
+        }
+
+        /* Contact Buttons */
         .link-buttons {
             margin: 40px 0;
             text-align: center;
@@ -173,19 +195,22 @@
 
 <!-- Navbar -->
 <div class="navbar">
-    <h1>Kochakorn Wetchadet</h1>
+    <a href="#profile">Profile</a>
+    <a href="#about">About</a>
+    <a href="#pictures">Pictures</a>
+    <a href="#contact">Contact</a>
 </div>
 
 <!-- Hero Section -->
-<section class="hero">
-    <img src="your-profile.jpg" alt="Profile Picture">
+<section class="hero" id="profile">
+    <img src="ครีม1.jpg" alt="Profile Picture">
     <h1>Kochakorn Wetchadet</h1>
     <h2>นางสาวกชกร เวชเดช</h2>
     <h2>สาขาเทคโนโลยีมัลติมีเดีย | มหาวิทยาลัยเทคโนโลยีราชมงคลสุวรรณภูมิ</h2>
 </section>
 
 <!-- About Section -->
-<section class="about">
+<section class="about" id="about">
     <h2>ABOUT ME</h2>
     <p>
         สวัสดีค่ะ ดิฉันนางสาวกชกร เวชเดช ชื่อเล่นชื่อครีม ฉันมีความสนใจในเทคโนโลยี ฉันเคยแข่งเกมส์ 
@@ -196,20 +221,19 @@
     </p>
 </section>
 
-<!-- Picture Section -->
-<section class="pictures">
-    <img src="image1.jpg" alt="Picture 1">
-    <img src="image2.jpg" alt="Picture 2">
-    <img src="image3.jpg" alt="Picture 3">
-    <img src="image4.jpg" alt="Picture 4">
-    <img src="image5.jpg" alt="Picture 5">
-    <img src="image6.jpg" alt="Picture 6">
-    <img src="image7.jpg" alt="Picture 7">
-    <img src="image8.jpg" alt="Picture 8">
+<!-- Profile Section with Images -->
+<section class="profile">
+    <h2>Profile Picture Gallery</h2>
+    <div style="display: flex; gap: 20px;">
+        <img src="ครีม2.jpg" alt="Image 2">
+        <img src="ครีม3.jpg" alt="Image 3">
+        <img src="ครีม4.jpg" alt="Image 4">
+        <img src="ครีม5.jpg" alt="Image 5">
+    </div>
 </section>
 
 <!-- Contact Buttons -->
-<div class="link-buttons">
+<div class="link-buttons" id="contact">
     <a href="https://www.facebook.com/profile.php?id=100026599628235" target="_blank">Facebook</a>
     <a href="https://www.instagram.com/kreamkch_/?next=%2F" target="_blank">Instagram</a>
     <a href="mailto:466420241001-st@rmutsb.ac.th">Email</a>
@@ -223,7 +247,7 @@
 </footer>
 
 </body>
-</html>
+</html
 
 
 

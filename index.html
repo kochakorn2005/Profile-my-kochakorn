@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kochakorn Wetchadet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         body {
             margin: 0;
             padding: 0;
-            font-family: "Roboto", Arial, sans-serif;
+            font-family: 'Poppins', Arial, sans-serif;
             background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
@@ -20,7 +21,7 @@
             color: white;
             padding: 20px;
             text-align: center;
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
         }
 
@@ -63,11 +64,16 @@
             color: #555;
         }
 
-        .hobby-section, .contact-section {
+        .contact-section {
             margin-top: 20px;
+            text-align: center;
         }
 
-        .contact-button {
+        .contact-item {
+            margin: 10px 0;
+        }
+
+        .contact-link {
             display: inline-block;
             background-color: #620000;
             color: white;
@@ -76,18 +82,18 @@
             border-radius: 5px;
             font-size: 16px;
             text-align: center;
-            margin: 20px auto;
-            transition: background-color 0.3s;
+            margin: 10px auto;
+            transition: background-color 0.3s, transform 0.2s;
         }
 
-        .contact-button:hover {
+        .contact-link:hover {
             background-color: #8b0000;
+            transform: scale(1.05);
         }
 
-        .social-icon {
-            display: block;
-            margin: 0 auto 10px;
-            width: 40px;
+        .icon {
+            margin-right: 8px;
+            vertical-align: middle;
         }
 
         footer {
@@ -112,22 +118,48 @@
         <h2>มหาวิทยาลัยเทคโนโลยีราชมงคลสุวรรณภูมิ</h2>
         <h3>คณะวิทยาศาสตร์และเทคโนโลยี | สาขาเทคโนโลยีมัลติมีเดีย</h3>
 
-        <div class="hobby-section">
-            <h2>งานอดิเรก</h2>
-            <h3>- ชอบฟังเพลงวง PUN</h3>
-            <h3>- ชอบฟัง The Ghost Radio</h3>
-            <h3>- ชอบเล่นเกม</h3>
-        </div>
-
         <div class="contact-section">
             <h2>ช่องทางการติดต่อ</h2>
-            <img src="FB.icon.jpg" alt="Facebook Icon" class="social-icon">
-            <a href="https://www.facebook.com/profile.php?id=100026599628235" target="_blank" class="contact-button">เยี่ยมชม Facebook</a>
+            
+            <!-- Instagram -->
+            <div class="contact-item">
+                <a href="https://www.instagram.com/kreamkch_/?next=%2F" target="_blank" class="contact-link">
+                    <img src="instagram-icon.png" alt="Instagram Icon" class="icon" width="20">
+                    Instagram
+                </a>
+            </div>
+            
+            <!-- Phone -->
+            <div class="contact-item">
+                <a href="tel:0651141784" class="contact-link">
+                    <img src="phone-icon.png" alt="Phone Icon" class="icon" width="20">
+                    065-114-1784
+                </a>
+            </div>
+            
+            <!-- Line -->
+            <div class="contact-item">
+                <a href="https://line.me/ti/p/~0651141784" target="_blank" class="contact-link">
+                    <img src="line-icon.png" alt="Line Icon" class="icon" width="20">
+                    Line: 0651141784
+                </a>
+            </div>
+            
+            <!-- Email -->
+            <div class="contact-item">
+                <a href="mailto:466420241001-st@rmutsb.ac.th" class="contact-link">
+                    <img src="email-icon.png" alt="Email Icon" class="icon" width="20">
+                    Email: 466420241001-st@rmutsb.ac.th
+                </a>
+            </div>
         </div>
     </div>
 
     <footer>
         &copy; 2024 Kochakorn Wetchadet. All Rights Reserved.
     </footer>
+</body>
+</html>
+
 </body>
 </html>

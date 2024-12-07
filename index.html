@@ -3,105 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kochakorn Wetchadet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        /* General Reset */
+        /* Reset Default Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Helvetica Neue', sans-serif;
         }
 
-        /* Body and overall layout */
         body {
-            background-color: #f7f7f7;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
             color: #333;
-            padding: 0;
-            font-size: 16px;
         }
 
-        /* Header */
+        /* Header Styles */
         header {
+            background-color: #8B0000;
+            color: #fff;
+            padding: 20px 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #9a0202;
-            padding: 20px 40px;
-            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
 
-        .left-header h1 {
-            font-size: 30px;
-            font-weight: bold;
+        header h1 {
+            font-size: 28px;
+            font-weight: 700;
             letter-spacing: 2px;
         }
 
-        .right-header ul {
-            list-style: none;
+        header nav {
             display: flex;
             gap: 20px;
         }
 
-        .right-header li {
-            font-size: 18px;
-        }
-
-        .right-header a {
+        header nav a {
+            color: #fff;
             text-decoration: none;
-            color: white;
-            transition: color 0.3s;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s ease;
         }
 
-        .right-header a:hover {
-            color: #f4f4f4;
+        header nav a:hover {
+            color: #ffeb3b;
         }
 
         /* Profile Section */
         .profile-section {
+            padding: 120px 10% 60px;
             text-align: center;
-            margin-top: 50px;
         }
 
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 8px;
+        .profile-section img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
             object-fit: cover;
             margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
-        .profile-section h2 {
-            font-size: 24px;
+        .profile-section h1, .profile-section h2 {
+            font-size: 28px;
             font-weight: 700;
             color: #333;
         }
 
         /* About Section */
-        .about-section {
-            margin: 40px 10%;
+        #about {
+            padding: 60px 10%;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
         }
 
-        .about-section h2 {
-            font-size: 28px;
-            color: #9a0202;
+        #about h2 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #8B0000;
             margin-bottom: 20px;
         }
 
-        .about-section p {
-            font-size: 18px;
+        #about p {
+            font-size: 16px;
             line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        #about a {
+            color: #8B0000;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        #about a:hover {
+            color: #ffeb3b;
         }
 
         /* Pictures Section */
-        .pictures-section {
-            margin: 50px 10%;
+        #pictures {
+            padding: 60px 10%;
             text-align: center;
         }
 
-        .pictures-section h2 {
-            font-size: 28px;
-            color: #9a0202;
+        #pictures h2 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #8B0000;
             margin-bottom: 20px;
         }
 
@@ -113,114 +134,93 @@
 
         .pictures-gallery img {
             width: 100%;
-            height: auto;
             border-radius: 8px;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .pictures-gallery img:hover {
             transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
         }
 
-        /* Contact Section */
-        .contact-section {
-            background-color: #f4f4f4;
-            padding: 50px 10%;
-            text-align: center;
-        }
-
-        .contact-section h2 {
-            font-size: 28px;
-            color: #9a0202;
-            margin-bottom: 20px;
-        }
-
-        .contact-section p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        /* Contact Button */
-        .contact-btn {
-            display: inline-block;
-            background-color: #9a0202;
-            color: white;
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 25px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .contact-btn:hover {
-            background-color: #f4f4f4;
-            color: #9a0202;
-            transform: scale(1.05);
-        }
-
-        /* Footer */
+        /* Footer Section */
         footer {
+            background-color: #333;
+            color: #fff;
             text-align: center;
-            padding: 20px;
-            background-color: #9a0202;
-            color: white;
-            margin-top: 50px;
+            padding: 40px;
         }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            color: #ffeb3b;
+        }
+
+        /* Button Styles */
+        .button {
+            background-color: #8B0000;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ffeb3b;
+        }
+
     </style>
 </head>
 <body>
-    <header>
-        <div class="left-header">
-            <h1>KOCHAKORN WETCHADET</h1>
-        </div>
-        <nav class="right-header">
-            <ul>
-                <li><a href="#profile">PROFILE</a></li>
-                <li><a href="#about">ABOUT ME</a></li>
-                <li><a href="#pictures">PICTURES</a></li>
-                <li><a href="#contact" class="contact-btn">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="profile" class="profile-section">
-        <img src="ครีม1.jpg" alt="Kochakorn Wetchadet" class="profile-img">
-        <h2>KOCHAKORN WETCHADET</h2>
-    </section>
+<header>
+    <h1>KOCHAKORN WETCHADET</h1>
+    <nav>
+        <a href="#profile">Profile</a>
+        <a href="#about">About</a>
+        <a href="#pictures">Pictures</a>
+        <a href="#contact" class="button">Contact</a>
+    </nav>
+</header>
 
-    <section id="about" class="about-section">
-        <h2>ABOUT ME</h2>
-        <p>สวัสดีค่ะ ดิฉันนางสาวกชกร เวชเดช ชื่อเล่นชื่อครีม ฉันมีความสนใจในเทคโนโลยี ฉันเคยเเข่งเกมส์
-            ฉันชอบเล่นเกมส์ Phasmophobia เเละเกมส์เเนวเนื้อเรื่องเพราะมันทำให้ฉันได้อ่านเนื้อเรื่องในเกมส์
-            เพื่อให้เข้าใจเนื้อเรื่องในการเล่น ฉันชอบฟังเพลง <a href="https://www.youtube.com/watch?v=tnhBwIPRvXI" target="_blank">Lost Jigsaw - guncharlie</a> และเพลง
-            <a href="https://www.youtube.com/watch?v=ekzHIouo8Q4" target="_blank">Bruno Mars - When I Was Your Man</a> ฉันชอบถ่ายรูป ชอบเก็บบรรยากาศ
-            ชอบถ่ายอะไรที่สวยๆเก็บไว้</p>
-    </section>
+<section class="profile-section" id="profile">
+    <img src="ครีม1.jpg" alt="Kochakorn Profile Picture">
+    <h1>Kochakorn Wetchadet</h1>
+    <h2>นางสาวกชกร เวชเดช</h2>
+    <p>สาขาเทคโนโลยีมัลติมีเดีย | มหาวิทยาลัยเทคโนโลยีราชมงคลสุวรรณภูมิ</p>
+</section>
 
-    <section id="pictures" class="pictures-section">
-        <h2>PICTURES</h2>
-        <div class="pictures-gallery">
-            <img src="ครีม1.jpg" alt="Picture 1">
-            <img src="ครีม2.jpg" alt="Picture 2">
-            <img src="ครีม3.jpg" alt="Picture 3">
-            <img src="ครีม4.jpg" alt="Picture 4">
-            <img src="ครีม5.jpg" alt="Picture 5">
-        </div>
-    </section>
+<section id="about">
+    <h2>ABOUT ME</h2>
+    <p>สวัสดีค่ะ ดิฉันนางสาวกชกร เวชเดช ชื่อเล่นชื่อครีม ฉันมีความสนใจในเทคโนโลยี ฉันเคยเเข่งเกมส์ ฉันชอบเล่นเกมส์ Phasmophobia เเละเกมส์เเนวเนื้อเรื่องเพราะมันทำให้ฉันได้อ่านเนื้อเรื่องในเกมส์ เพื่อให้เข้าใจเนื้อเรื่องในการเล่น ฉันชอบฟังเพลง <a href="https://www.youtube.com/watch?v=tnhBwIPRvXI" target="_blank">Lost Jigsaw - guncharlie</a> และเพลง <a href="https://www.youtube.com/watch?v=ekzHIouo8Q4" target="_blank">Bruno Mars - When I Was Your Man</a> ฉันชอบถ่ายรูป ชอบเก็บบรรยากาศ ชอบถ่ายอะไรที่สวยๆเก็บไว้</p>
+</section>
 
-    <section id="contact" class="contact-section">
-        <h2>CONTACT</h2>
-        <p>If you want to get in touch with me, feel free to reach out!</p>
-        <a href="mailto:466420241001-st@rmutsb.ac.th" class="contact-btn">Send Email</a>
-    </section>
+<section id="pictures">
+    <h2>PICTURES</h2>
+    <div class="pictures-gallery">
+        <img src="วิว1.jpg" alt="View 1">
+        <img src="วิว2.jpg" alt="View 2">
+        <img src="วิว3.jpg" alt="View 3">
+        <img src="วิว4.jpg" alt="View 4">
+        <img src="วิว5.jpg" alt="View 5">
+        <img src="วิว6.jpg" alt="View 6">
+    </div>
+</section>
 
-    <footer>
-        <p>© 2024 Kochakorn Wetchadet. All rights reserved.</p>
-    </footer>
+<footer>
+    <p>&copy; 2024 Kochakorn Wetchadet. All rights reserved.</p>
+    <p><a href="https://www.facebook.com/profile.php?id=100026599628235" target="_blank">Facebook</a> | <a href="https://www.instagram.com/kreamkch_/" target="_blank">Instagram</a></p>
+</footer>
+
 </body>
 </html>
-
-
-
-
